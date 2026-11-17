@@ -1,0 +1,6 @@
+{
+  "name": "ENGLISH MASTER",
+  "description": "تعلّم الإنجليزية خطوة بخطوة — تطبيق تعليمي تفاعلي متكامل لتعلّم اللغة الإنجليزية للمبتدئين بالاعتماد على منهج تكلم الإنجليزية في عشرة أيام.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

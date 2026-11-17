@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">وسيم باقش</string>
+    <string name="title_activity_main">وسيم باقش</string>
+    <string name="package_name">com.englishmaster.app</string>
+    <string name="custom_url_scheme">com.englishmaster.app</string>
+</resources>

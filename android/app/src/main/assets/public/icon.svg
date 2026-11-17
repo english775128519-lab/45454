@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0F2942" />
+  <rect x="36" y="36" width="440" height="440" rx="88" fill="none" stroke="#0D9488" stroke-width="12" opacity="0.55" />
+  <path d="M132 152h248v208H132z" fill="none" />
+  <text x="256" y="278" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="168" fill="#FFFFFF" text-anchor="middle" letter-spacing="-6">EM</text>
+  <rect x="156" y="324" width="200" height="16" rx="8" fill="#14B8A6" />
+  <circle cx="384" cy="148" r="24" fill="#F59E0B" />
+</svg>

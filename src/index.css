@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-ar: 'Tajawal', 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+    --font-en: 'Nunito', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html {
+    font-family: var(--font-ar);
+    font-size: 18px;
+    line-height: 1.75;
+    scroll-behavior: smooth;
+  }
+
+  html[data-font-size='normal'] {
+    font-size: 16.5px;
+  }
+
+  html[data-font-size='large'] {
+    font-size: 18px;
+  }
+
+  html[data-font-size='xlarge'] {
+    font-size: 20px;
+  }
+
+  body {
+    @apply bg-white text-[#3C3C3C] dark:bg-[#131F24] dark:text-[#F1F7F9] antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-weight: 500;
+  }
+
+  h1, h2, h3, h4 {
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+}
+
+.font-english {
+  font-family: var(--font-en);
+  direction: ltr;
+  unicode-bidi: isolate;
+  letter-spacing: 0.01em;
+}
+
+.font-numeric {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 3D Flashcard Flip Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Tactile Duolingo-style micro-interactions */
+@keyframes shake-gentle {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes pop-success {
+  0% { transform: scale(0.96); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes duo-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-shake {
+  animation: shake-gentle 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-pop {
+  animation: pop-success 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-duo-bob {
+  animation: duo-bob 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shake,
+  .animate-pop,
+  .animate-duo-bob,
+  .transition-transform {
+    animation: none !important;
+    transition: none !important;
+  }
+}
